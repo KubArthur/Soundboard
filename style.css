@@ -1,0 +1,187 @@
+/* Style général */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #1e1e1ef0; /* Fond avec transparence */
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  border-radius: 100px; /* Coins arrondis */
+  overflow: hidden; /* Empêche le contenu de déborder */
+}
+
+.container {
+  text-align: center;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px #00000080;
+  width: 87%;
+  max-width: 500px;
+  max-height: 500px; /* Limite maximale pour l'ensemble du conteneur */
+  overflow: hidden; /* Empêche le conteneur de dépasser la hauteur */
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+h1:hover {
+  color: #735bc1;
+  font-weight: bold;
+}
+
+.btn {
+  background-color: #4caf50;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+.icon-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn i {
+  font-size: 24px;
+  color: white;
+}
+
+.btn:hover i {
+  color: #735bc1; /* Changer la couleur de l'icône au survol */
+}
+.stop-btn {
+  background-color: #f44336; /* Couleur rouge pour le bouton "Stop" */
+}
+
+.stop-btn:hover {
+  background-color: #e53935; /* Rouge plus sombre au survol */
+}
+
+/* Flexbox pour l'agencement responsive des boutons */
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Permet aux éléments d'aller à la ligne */
+  justify-content: center;
+  gap: 10px; /* Espace entre les boutons */
+  max-height: 50vh; /* Limite de hauteur pour activer la scrollbar */
+  overflow-y: auto; /* Scrollbar verticale quand nécessaire */
+}
+
+ul li {
+  background-color: #2a2a2a;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 100px; /* Largeur minimale */
+  text-align: center;
+  flex-grow: 1; /* Les boutons peuvent s'étendre */
+}
+
+ul li:hover {
+  background-color: #3a3a3a;
+  color: #735bc1;
+  font-weight: bold;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrer horizontalement */
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Pour s'assurer que ça ne dépasse pas dans des petits écrans */
+}
+
+.btn {
+  flex-shrink: 0; /* Assure que le bouton ne rétrécit pas */
+}
+
+#volume {
+  flex-grow: 1; /* Permet à la barre de volume de s'étendre pour remplir l'espace disponible */
+  max-width: 150px; /* Fixe une largeur maximale pour éviter qu'elle devienne trop large */
+  -webkit-appearance: none; /* Supprimer le style par défaut */
+  appearance: none;
+  height: 8px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+
+#volume:hover {
+  opacity: 1;
+  background: #735bc1;
+}
+
+#volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #4caf50;
+  cursor: pointer;
+}
+
+#volume::-webkit-slider-thumb:hover {
+  background: #45a049;
+}
+
+#volume::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #4caf50;
+  cursor: pointer;
+}
+
+#volume::-ms-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #4caf50;
+  cursor: pointer;
+}
+
+/* Scrollbar personnalisée (facultatif) */
+ul::-webkit-scrollbar {
+  width: 8px;
+}
+
+ul::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background-color: #4caf50;
+  border-radius: 10px;
+}
+
+ul::-webkit-scrollbar-thumb:hover {
+  background-color: #45a049; /* Couleur plus claire au survol */
+}
